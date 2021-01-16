@@ -13,12 +13,7 @@ body {
     color: #BEE3D8;
 }
 
-.logo {
-    width: 55px;
-    text-align:center;
-    display: inline-block;
-    background-color: #555B6E;
-}
+
 
 .topnav {
     background-color: #89B0AE;
@@ -58,31 +53,91 @@ body {
     left: 0;
     background-color: #555B6E; 
     overflow-x: hidden;
-    padding-top: 10px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, 'Open Sans', 'Helvetica Neue', sans-serif;
-    
 }
 
 .sidenav a {
+    display: block;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: #BEE3DB;
+    padding-left: 30px;
+    padding-top: 10px;
+    
+}
+
+.sidenav .logo {
+    background-color: #555B6E;
+    padding-left: 50px;
+    display: block;
 }
 
 .main {
     margin-left: 225px;
 }
 
-.triangle-down {
-    width: 0;
-    height: 0;
-    
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
-    border-top: 10px solid #c4c4c4;
-    float: right;
-    
+.dropdown {
+    position: relative;
+    display: inline-block;
 }
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:#555B6E;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba (0,0,0,0.2);
+    z-index:1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .btn {
+  background-color: #3e8e41;
+}
+
+.container {
+    position: relative;
+    width: 4%;
+    float: right;
+    padding:12px;
+}
+
+.container img {
+    width: 100%;
+    height: auto;
+}
+
+/* Style the button and place it in the middle of the container/image */
+.container .btn {
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(50%, 50%);
+    background-color: transparent;
+   
+    border: none;
+    padding: 20px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
 
 @media screen and (max-height: 450px){
     .sidenav {padding-top: 15px;}
