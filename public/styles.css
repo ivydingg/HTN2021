@@ -13,7 +13,7 @@ body {
     color: #BEE3D8;
 }
 
-h1, h2, h3, h4, h5, .title {
+h1, h2, h3, h4, h5, .title, .btn {
     font-family: -apple-system, 'Helvetica', sans-serif;
     color: #555B6E;
 }
@@ -73,4 +73,10 @@ button {
     color: #555B6E;
     background: #FFD6BA;
     margin: 5px 0px 15px;
+}
+
+.btn-outline-secondary {
+    border-color: #555B6E;
+    margin: 5px 0px 15px;
+    font-size: 36px;
 }
