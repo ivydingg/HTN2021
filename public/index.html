@@ -9,14 +9,8 @@
     <script defer src="/__/firebase/8.2.3/firebase-app.js"></script>
     <!-- include only the Firebase features as you need -->
     <script defer src="/__/firebase/8.2.3/firebase-auth.js"></script>
-    <script defer src="/__/firebase/8.2.3/firebase-database.js"></script>
     <script defer src="/__/firebase/8.2.3/firebase-firestore.js"></script>
-    <script defer src="/__/firebase/8.2.3/firebase-functions.js"></script>
     <script defer src="/__/firebase/8.2.3/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/8.2.3/firebase-storage.js"></script>
-    <script defer src="/__/firebase/8.2.3/firebase-analytics.js"></script>
-    <script defer src="/__/firebase/8.2.3/firebase-remote-config.js"></script>
-    <script defer src="/__/firebase/8.2.3/firebase-performance.js"></script>
     
     <script src="./scripts/index.js"></script>
 
@@ -43,10 +37,13 @@
   </head>
   <body>
     <div id="message">
+      <div id="sign-in-status"></div>
+      <div id="sign-in"></div>
+      <pre id="account-details"></pre>
       <h2>Welcome</h2>
       <h1>Firebase Hosting Setup Complete</h1>
       <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+      <a target="_blank" href="https://localhost:5000/sign_in.html">Sign In</a>
     </div>
     <p id="load">Firebase SDK Loading&hellip;</p>
 

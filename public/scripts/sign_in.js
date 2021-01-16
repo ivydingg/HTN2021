@@ -1,37 +1,48 @@
 // FirebaseUI config.
 var uiConfig = {
-    signInSuccessUrl: '<url-to-redirect-to-on-success>',
+    callbacks: {
+        signInSuccessWithAuthResult: function(authResult, redirectUrl) {
+          // User successfully signed in.
+          // Return type determines whether we continue the redirect automatically
+          // or whether we leave that to developer to handle.
+          return true;
+        },
+        uiShown: function() {
+          // The widget is rendered.
+          // Hide the loader.
+          document.getElementById('loader').style.display = 'none';
+        }
+    },
+    // Url to redirect to after a successful sign-in.
+    signInSuccessUrl: 'https://www.google.com',
     signInOptions: [
-      // Leave the lines as is for the providers you want to offer your users.
-      firebase.auth.EmailAuthProvider.PROVIDER_ID,
-      firebaseui.auth.AnonymousAuthProvider.PROVIDER_ID
+        {
+            provider: firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+            // Required to enable ID token credentials for this provider.
+            clientId: CLIENT_ID
+        },
+            firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+        // Other providers don't need to be given as object.
+        firebase.auth.EmailAuthProvider.PROVIDER_ID,
+        firebaseui.auth.AnonymousAuthProvider.PROVIDER_ID
     ],
-    // tosUrl and privacyPolicyUrl accept either url string or a callback
-    // function.
+    // tosUrl and privacyPolicyUrl accept either url string or a callback function.
     // Terms of service url/callback.
-    tosUrl: '<your-tos-url>',
+    tosUrl: 'https://www.google.com',
     // Privacy policy url/callback.
     privacyPolicyUrl: function() {
-      window.location.assign('<your-privacy-policy-url>');
+      window.location.assign('https://www.google.com');
     }
   };
   
   // Initialize the FirebaseUI Widget using Firebase.
   var ui = new firebaseui.auth.AuthUI(firebase.auth());
 
-  ui.start('#firebaseui-auth-container', {
-      signInOptions: [
-      {
-          provider: firebase.auth.EmailAuthProvider.PROVIDER_ID,
-      }
-      ],
-      // Other config options...
-  });
   // The start method will wait until the DOM is loaded.
   ui.start('#firebaseui-auth-container', uiConfig);
 
 
-
+/*
 // Temp variable to hold the anonymous user data if needed.
 var data = null;
 // Hold a reference to the anonymous current user.
@@ -46,7 +57,6 @@ ui.start('#firebaseui-auth-container', {
     firebase.auth.GoogleAuthProvider.PROVIDER_ID,
     firebase.auth.FacebookAuthProvider.PROVIDER_ID,
     firebase.auth.EmailAuthProvider.PROVIDER_ID,
-    firebase.auth.PhoneAuthProvider.PROVIDER_ID
   ],
   callbacks: {
     // signInFailure callback must be provided to handle merge conflicts which
@@ -66,4 +76,4 @@ ui.start('#firebaseui-auth-container', {
       return firebase.auth().signInWithCredential(cred);
     }
   }
-});
+});*/
