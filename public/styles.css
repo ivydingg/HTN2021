@@ -13,13 +13,20 @@ body {
     color: #BEE3D8;
 }
 
-.title {
+h1, h2, h3, h4, h5, .title {
     font-family: -apple-system, 'Helvetica', sans-serif;
+    color: #555B6E;
+}
+
+a {
+    color: #555B6E;
+}
+
+.title {
     font-style: normal;
     font-weight: bold;
     font-size: 56px;
     line-height: 120px;
-    color: #555B6E;
 }
 
 #landing_div {
