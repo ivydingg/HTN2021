@@ -13,7 +13,7 @@ body {
     color: #BEE3D8;
 }
 
-h2, h3, h4, h5, .title {
+h1, h2, h3, h4, h5, .title {
     font-family: -apple-system, 'Helvetica', sans-serif;
     color: #555B6E;
 }
@@ -43,4 +43,34 @@ a {
 
 .ideas {
     background: #89B0AE;
+}
+
+.form_bg {
+    background-image: url("img/landing_bg.png");
+    background-size: 100%;
+    background-color: #FFD6BA;
+    background-repeat: no-repeat;
+    border-color: none;
+    padding: 50px;
+}
+
+.form {
+    background: white;
+    padding: 80px 80px;
+    margin: 5% 25%;
+}
+
+.form_component {
+    text-align: left;
+}
+
+input {
+    width: 100%;
+    margin: 0px 0px 15px;
+}
+
+button {
+    color: #555B6E;
+    background: #FFD6BA;
+    margin: 5px 0px 15px;
 }

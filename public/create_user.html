@@ -38,32 +38,31 @@
     <link rel = "stylesheet" href = "styles.css">
 
   </head>
-  <body>
-    <div id="message">
-        <h1>This is the create user page</h1>
-        <h3>First name</h3>
-        <input
-        class="input1"
-        type="text"
-        />
-        <h3>Last name</h3>
-        <input
-            class="input1"
-            type="text"
-            />
-        <h3>Username</h3>
-        <input
-            class="input1"
-            type="text"
-            />
-        <h3>Email address</h3>
-        <input
-            class="input1"
-            type="text"
-            />
-        
-        <a href="index.html">Home</a></br>
-        <a href="sign_in.html">Sign In</a>
+  <body style="background-color:#FFD6BA">
+    <div class="form_bg">
+      <form>
+      <div class="form">
+        <h1>Sign up for an account</h1>
+          <div class="form_component">
+            <label for="FirstName">First Name</label>
+            <input type="text">
+          </div>
+          <div class="form_component">
+            <label for="LastName">Last Name</label>
+            <input type="text">
+          </div>
+          <div class="form_component">
+            <label for="Username">Username</label>
+            <input type="text">
+          </div>
+          <div class="form_component">
+            <label for="Email">Email address</label>
+            <input type="email">
+          </div>
+          <button type="submit">Submit</button>
+          <h5><a href="index.html">Home</a>  |  <a href="sign_in.html">Sign In</a></h5>
+        </div>
+      </form>
     </div>
 
     <script>
