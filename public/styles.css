@@ -143,3 +143,80 @@ body {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
 }
+h1, h2, h3, h4, h5, h6, .title, .btn {
+    font-family: -apple-system, 'Helvetica', sans-serif;
+    color: #555B6E;
+}
+
+a {
+    color: #555B6E;
+}
+
+.title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 56px;
+    line-height: 200px;
+}
+
+#landing_div {
+    background-image: url("img/landing_bg.png");
+    background-size: 100%;
+    background-color: #FFD6BA;
+    background-repeat: no-repeat;
+    border-color: none;
+    height: 780px;
+    width: 100%;
+    text-align: center;
+    padding: 270px 0;
+}
+
+.ideas {
+    background: #89B0AE;
+}
+
+.form_bg {
+    background-image: url("img/landing_bg.png");
+    background-size: 100%;
+    background-color: #FFD6BA;
+    background-repeat: no-repeat;
+    border-color: none;
+    padding: 50px;
+}
+
+.form, .form_ideas {
+    background: white;
+    padding: 80px 80px;
+}
+
+.form {
+    margin: 5% 25%;
+}
+
+.form_ideas {
+    margin: 5% 10%;
+}
+
+.form_component {
+    text-align: left;
+}
+
+input, textarea {
+    margin: 0px 0px 15px;
+}
+
+button {
+    color: #555B6E;
+    background: #FFD6BA;
+    margin: 5px 0px 15px;
+}
+
+.btn-outline-secondary {
+    border-color: #555B6E;
+    margin: 5px 0px 15px;
+    font-size: 36px;
+}
+
+#check {
+    text-align: left;
+}

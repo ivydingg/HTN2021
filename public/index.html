@@ -34,28 +34,27 @@
       crossorigin="anonymous"
     />
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #555B6E; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; font-weight: bold; text-align: center; background: #FFD6BA; text-transform: uppercase; text-decoration: none; color: #555B6E; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
+    <!-- our CSS -->
+    <link rel = "stylesheet" href = "styles.css">
     </style>
   </head>
   <body>
-    <div id="message">
-      <h1>Welcome to Cloud Castle</h1>
-      <h2>dare to dream</h2>
-      <a href="create_user.html">Sign Up</a></br>
-      <a href="sign_in.html">Sign In</a>
+    <!-- First landing div -->
+    <div id="landing_div">
+      <div class="title">Welcome to Cloud Castle</div>
+      <div>
+        <h1><i>build your dreams here</i></h1></br>
+        <a href="submit_idea.html" class="btn btn-outline-secondary btn-lg" role="button" aria-pressed=true>Submit your idea here</a>
+        <h3><a href="create_user.html">Sign Up</a>  |  <a href="sign_in.html">Sign In</a></h3>
+      </div>
     </div>
+
+    <!-- Ideas section // Where ideas are listed-->
+    <div class="ideas">
+      <h1>This div is for the project ideas section</h1>
+      </br> </br> </br> </br> </br>
+    </div>
+
 
     <script>
       document.addEventListener('DOMContentLoaded', function() {
