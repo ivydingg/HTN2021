@@ -13,8 +13,6 @@ body {
     color: #BEE3D8;
 }
 
-
-
 .topnav {
     background-color: #89B0AE;
     overflow: hidden;
@@ -143,12 +141,17 @@ body {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
 }
+
 h1, h2, h3, h4, h5, h6, .title, .btn {
     font-family: -apple-system, 'Helvetica', sans-serif;
     color: #555B6E;
 }
 
 a {
+    color: #89B0AE;
+}
+
+.dark_link {
     color: #555B6E;
 }
 
@@ -162,7 +165,7 @@ a {
 #landing_div {
     background-image: url("img/landing_bg.png");
     background-size: 100%;
-    background-color: #FFD6BA;
+    background-color: #89B0AE;
     background-repeat: no-repeat;
     border-color: none;
     height: 780px;
@@ -178,7 +181,7 @@ a {
 .form_bg {
     background-image: url("img/landing_bg.png");
     background-size: 100%;
-    background-color: #FFD6BA;
+    background-color: #89B0AE;
     background-repeat: no-repeat;
     border-color: none;
     padding: 50px;
@@ -186,7 +189,8 @@ a {
 
 .form, .form_ideas {
     background: white;
-    padding: 80px 80px;
+    padding: 60px 60px;
+    border-radius: 15px;
 }
 
 .form {
@@ -208,16 +212,17 @@ input, textarea {
 button {
     color: #555B6E;
     border-radius: 5px;
-    background: #FFD6BA;
+    border: none;
+    background: #89B0AE;
+    padding: 5px 10px;
     margin: 5px 0px 15px;
+    font-size: 20px;
 }
 
 .btn-outline-secondary {
     border-color: #555B6E;
+    color: #555B6E;
+    border-width: 2px;
     margin: 5px 0px 15px;
     font-size: 36px;
-}
-
-#check {
-    text-align: left;
 }
