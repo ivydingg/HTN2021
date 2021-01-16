@@ -13,7 +13,7 @@ body {
     color: #BEE3D8;
 }
 
-h1, h2, h3, h4, h5, .title, .btn {
+h1, h2, h3, h4, h5, h6, .title, .btn {
     font-family: -apple-system, 'Helvetica', sans-serif;
     color: #555B6E;
 }
@@ -71,7 +71,7 @@ a {
     text-align: left;
 }
 
-input {
+input, textarea {
     width: 100%;
     margin: 0px 0px 15px;
 }
