@@ -12,26 +12,12 @@
     <script defer src="/__/firebase/8.2.3/firebase-app.js"></script>
     <!-- include only the Firebase features as you need -->
     <script defer src="/__/firebase/8.2.3/firebase-auth.js"></script>
-    <script defer src="/__/firebase/8.2.3/firebase-database.js"></script>
     <script defer src="/__/firebase/8.2.3/firebase-firestore.js"></script>
-    <script defer src="/__/firebase/8.2.3/firebase-functions.js"></script>
     <script defer src="/__/firebase/8.2.3/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/8.2.3/firebase-storage.js"></script>
-    <script defer src="/__/firebase/8.2.3/firebase-analytics.js"></script>
-    <script defer src="/__/firebase/8.2.3/firebase-remote-config.js"></script>
-    <script defer src="/__/firebase/8.2.3/firebase-performance.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
 
-    
 
-    <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
-    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.css" />
-
-    <script src="./scripts/sign_in.js"></script>
+    <script src="./scripts/auth.js"></script>
     
 
     <!-- Bootstrap CSS -->
@@ -45,10 +31,6 @@
     <!-- our CSS -->
     <link rel = "stylesheet" href = "styles.css">
 
-    
-    <!-- The surrounding HTML is left untouched by FirebaseUI.
-     Your app may use that space for branding, controls and other customizations.-->
-     <div id="firebaseui-auth-container"></div>
 
   </head>
   <body style="background-color:#FFD6BA">
@@ -58,50 +40,30 @@
         <h1>Sign up for an account</h1>
           <div class="form_component">
             <label for="FirstName">First Name</label>
-            <input type="text">
+            <input type="text" id = "first_name">
           </div>
           <div class="form_component">
             <label for="LastName">Last Name</label>
-            <input type="text">
+            <input type="text" id = "last_name">
           </div>
           <div class="form_component">
             <label for="Username">Username</label>
-            <input type="text">
+            <input type="text" id = "username">
           </div>
           <div class="form_component">
             <label for="Email">Email address</label>
-            <input type="email">
+            <input type="email" id = "email">
           </div>
-          <button type="submit">Submit</button>
+          <div class="form_component">
+            <label for="Password">Password</label>
+            <input type="password" id = "password">
+          </div>
+          <button id="sign-up" type = "button">Submit</button>
           <h5><a href="index.html">Home</a>  |  <a href="sign_in.html">Sign In</a></h5>
         </div>
       </form>
     </div>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
     <!-- Optional JavaScript -->
     <!-- Bootstrap CSS -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
