@@ -12,20 +12,13 @@
     <script defer src="/__/firebase/8.2.3/firebase-app.js"></script>
     <!-- include only the Firebase features as you need -->
     <script defer src="/__/firebase/8.2.3/firebase-auth.js"></script>
-    <script defer src="/__/firebase/8.2.3/firebase-database.js"></script>
     <script defer src="/__/firebase/8.2.3/firebase-firestore.js"></script>
-    <script defer src="/__/firebase/8.2.3/firebase-functions.js"></script>
     <script defer src="/__/firebase/8.2.3/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/8.2.3/firebase-storage.js"></script>
-    <script defer src="/__/firebase/8.2.3/firebase-analytics.js"></script>
-    <script defer src="/__/firebase/8.2.3/firebase-remote-config.js"></script>
-    <script defer src="/__/firebase/8.2.3/firebase-performance.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+    <script src="./scripts/auth.js"></script>
 
+  </head>
+  <body>
     <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
@@ -44,15 +37,16 @@
       <div class="form">
         <h1>Sign in</h1>
           <div class="form_component">
-            <label for="Username">Username</label>
-            <input type="text" class="form-control">
+            <label for="Username">Email</label>
+            <input type="text" id = "email" class="form-control">
           </div>
           <div class="form_component">
             <label for="Password">Password</label>
-            <input type="password" class="form-control">
+            <input type="password" id = "password" class="form-control">
           </div>
-          <button type="submit">Submit</button>
+          <button id = "sign-in" type="button">Submit</button>
           <h5><a href="index.html">Home</a>  |  <a href="create_user.html">Sign Up</a></h5>
+          <button type="password-reset">Reset Password</button>
         </div>
       </form>
     </div>
