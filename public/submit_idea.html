@@ -38,28 +38,101 @@
     <link rel = "stylesheet" href = "styles.css">
     </style>
   </head>
-  <body>
+  <body style="background-color:#FFD6BA">
     <!-- Submit an idea form -->
     <div class="form_bg">
         <form>
         <div class="form_ideas">
           <h1>Submit your idea</h1>
             <div class="form_component">
-              <label for="FirstName">First Name</label>
-              <input type="text">
+              <label for="IdeaTitle">Idea title (optional)</label>
+              <input type="text" class="form-control" placeholder="Does it have a name?">
             </div>
             <div class="form_component">
-              <label for="LastName">Last Name</label>
-              <input type="text">
+              <label for="Summary">Summary</label>
+              <input type="text" class="form-control" placeholder="What does your idea do? Who is it for? Keep it short and simple!">
             </div>
             <div class="form_component">
-              <label for="Username">Username</label>
-              <input type="text">
+              <label for="Description">Description (optional)</label>
+              <textarea 
+                class="form-control" 
+                placeholder="Leave your ramblings here so people understand your ideas better." 
+                rows="3"></textarea>
             </div>
             <div class="form_component">
-              <label for="Email">Email address</label>
-              <input type="email">
+              <label for="CurrentWork">Current work (if any)</label>
+              <textarea 
+                class="form-control" 
+                placeholder="Links for GitHub Repos, Figma, Google docs, Trello boards, etc." 
+                rows="3"></textarea>
+            </div></br>
+            <h5>Additional filters</h5>
+            <h6>Select all that apply</h6>
+
+            <div class="row">
+                <div class="col-4">
+                    <p>Looking for</p>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" value="">
+                        <label class="form-check-label" for="Designer">designer</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" value="">
+                        <label class="form-check-label" for="Developer">developer</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" value="">
+                        <label class="form-check-label" for="ProductManager">product manager</label>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <p>Type of technology:</p>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" value="">
+                        <label class="form-check-label" for="website">Website</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" value="">
+                        <label class="form-check-label" for="webApp">Web app</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" value="">
+                        <label class="form-check-label" for="iOSApp">iOS app</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" value="">
+                        <label class="form-check-label" for="androidApp">Android app</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" value="">
+                        <label class="form-check-label" for="figma">Figma Prototype</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" value="">
+                        <label class="form-check-label" for="other">Other</label>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <label for="Language">Language</label>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" value="">
+                        <label class="form-check-label" for="Javascript">Javascript</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" value="">
+                        <label class="form-check-label" for="HTML-CSS">HTML/CSS</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" value="">
+                        <label class="form-check-label" for="Python">Python</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" value="">
+                        <label class="form-check-label" for="Java">Java</label>
+                    </div>
+                </div>
             </div>
+
             <button type="submit">Submit</button>
             <h5><a href="index.html">Home</a>  |  <a href="sign_in.html">Sign In</a></h5>
           </div>
