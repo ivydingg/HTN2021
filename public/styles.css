@@ -13,7 +13,7 @@ body {
     color: #BEE3D8;
 }
 
-h1, h2, h3, h4, h5, .title {
+h2, h3, h4, h5, .title {
     font-family: -apple-system, 'Helvetica', sans-serif;
     color: #555B6E;
 }
@@ -26,7 +26,7 @@ a {
     font-style: normal;
     font-weight: bold;
     font-size: 56px;
-    line-height: 120px;
+    line-height: 200px;
 }
 
 #landing_div {
@@ -38,5 +38,9 @@ a {
     height: 780px;
     width: 100%;
     text-align: center;
-    padding: 300px 0;
+    padding: 270px 0;
+}
+
+.ideas {
+    background: #89B0AE;
 }
