@@ -39,13 +39,33 @@
     </style>
   </head>
   <body>
-    <!-- First landing div -->
-    <div id="landing_div">
-      <div class="title">Submit an Idea</div>
-      <h5><a href="index.html">Home</a></h5>
+    <!-- Submit an idea form -->
+    <div class="form_bg">
+        <form>
+        <div class="form_ideas">
+          <h1>Submit your idea</h1>
+            <div class="form_component">
+              <label for="FirstName">First Name</label>
+              <input type="text">
+            </div>
+            <div class="form_component">
+              <label for="LastName">Last Name</label>
+              <input type="text">
+            </div>
+            <div class="form_component">
+              <label for="Username">Username</label>
+              <input type="text">
+            </div>
+            <div class="form_component">
+              <label for="Email">Email address</label>
+              <input type="email">
+            </div>
+            <button type="submit">Submit</button>
+            <h5><a href="index.html">Home</a>  |  <a href="sign_in.html">Sign In</a></h5>
+          </div>
+        </form>
+      </div>
     </div>
-
-
     <script>
       document.addEventListener('DOMContentLoaded', function() {
         const loadEl = document.querySelector('#load');
