@@ -1,6 +1,14 @@
 function handleSignUp() {
   var email = document.getElementById('email').value;
   var password = document.getElementById('password').value;
+  var first_name = document.getElementById('first_name').value;
+  var last_name = document.getElementById('last_name').value;
+  var username = document.getElementById('username').value;
+
+  if (first_name.length == 0 || last_name.length == 0 || username.length == 0) {
+    alert('Please fill in all fields.');
+    return;
+  }
   if (email.length < 4) {
     alert('Please enter an email address.');
     return;
@@ -10,7 +18,14 @@ function handleSignUp() {
     return;
   }
   // Create user with email and pass.
-  firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+  firebase.auth().createUserWithEmailAndPassword(email, password).then(function(user) {
+    
+    user.uid = username;
+    user.displayName = first_name + " " + last_name;
+    console.log (user.displayName);
+    //window.location.href = "https://localhost:5000/project_page.html";
+
+  }).catch(function(error) {
     // Handle Errors here.
     var errorCode = error.code;
     var errorMessage = error.message;
@@ -50,7 +65,11 @@ function toggleSignIn() {
       return;
     }
     // Sign in with email and pass.
-    firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+    firebase.auth().signInWithEmailAndPassword(email, password).then(function(user) {
+    
+      window.location.href = "https://localhost:5000/project_page.html";
+  
+    }).catch(function(error) {
       // Handle Errors here.
       var errorCode = error.code;
       var errorMessage = error.message;
@@ -69,7 +88,7 @@ function sendPasswordReset() {
   var email = document.getElementById('email').value;
   firebase.auth().sendPasswordResetEmail(email).then(function() {
     // Password Reset Email Sent!
-    alert('Password Reset Email Sent!');
+    alert('Password Reset Email Sent! You may now close this window.');
   }).catch(function(error) {
     // Handle Errors here.
     var errorCode = error.code;
