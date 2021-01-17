@@ -200,12 +200,11 @@ li.dropdown {
 }
 
 .idea {
-    width: 95%;
+    width: 98%;
     height: 50px;
     border-radius: 10px;
     padding: 10px 10px;
     background-color: #c4c4c4;
-    margin-top: 10px;
 }
 
 .top {
@@ -223,7 +222,7 @@ li.dropdown {
 }
 
 #filler {
-    height: 245px;
+    height: 35px;
     width: 100%;
 }
 
