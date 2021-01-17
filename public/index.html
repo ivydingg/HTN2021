@@ -12,11 +12,29 @@
     <script defer src="/__/firebase/8.2.3/firebase-app.js"></script>
     <!-- include only the Firebase features as you need -->
     <script defer src="/__/firebase/8.2.3/firebase-auth.js"></script>
-    <script defer src="/__/firebase/8.2.3/firebase-firestore.js"></script>
-    <script defer src="/__/firebase/8.2.3/firebase-messaging.js"></script>
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
 
-    <script src="./scripts/index.js"></script>
+  
+    <script type="text/javascript">
+      function initApp() {
+  
+      // Listening for auth state changes.
+      firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+          // User is signed in.
+          var email = user.email;
+          console.log("logged in: " + email);
+        } else {
+          // User is signed out.
+          console.log("logged out");
+        }
+      });
+      }
+  
+      window.onload = function() {
+      initApp();
+      };
+    </script>
 
     <!-- Bootstrap CSS -->
     <link
@@ -42,7 +60,7 @@
         <div>
           <h1><i>where dreams are built</i></h1></br>
           <a href="submit_idea.html" class="btn btn-outline-secondary btn-lg" role="button" aria-pressed=true>Submit your idea here</a>
-          <a href="project_page.html" class="btn btn-outline-secondary btn-lg" role="button" aria-pressed=true>Check out some dreams</a>
+          <a href="gallery_view.html" class="btn btn-outline-secondary btn-lg" role="button" aria-pressed=true>Check out some dreams</a>
         </div>
       </div>
     </div>

@@ -12,19 +12,32 @@
     <script defer src="/__/firebase/8.2.3/firebase-app.js"></script>
     <!-- include only the Firebase features as you need -->
     <script defer src="/__/firebase/8.2.3/firebase-auth.js"></script>
-    <script defer src="/__/firebase/8.2.3/firebase-database.js"></script>
     <script defer src="/__/firebase/8.2.3/firebase-firestore.js"></script>
-    <script defer src="/__/firebase/8.2.3/firebase-functions.js"></script>
-    <script defer src="/__/firebase/8.2.3/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/8.2.3/firebase-storage.js"></script>
-    <script defer src="/__/firebase/8.2.3/firebase-analytics.js"></script>
-    <script defer src="/__/firebase/8.2.3/firebase-remote-config.js"></script>
-    <script defer src="/__/firebase/8.2.3/firebase-performance.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+    <script src="./scripts/auth.js"></script>
+    <script src="./scripts/firestore.js"></script>
+
+  
+    <script type="text/javascript">
+      function initApp() {
+  
+      // Listening for auth state changes.
+      firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+          // User is signed in.
+          var email = user.email;
+          console.log("logged in: " + email);
+        } else {
+          // User is signed out.
+          console.log("logged out");
+        }
+      });
+      }
+  
+      window.onload = function() {
+      initApp();
+      };
+    </script>
 
     <!-- Bootstrap CSS -->
     <link
@@ -46,15 +59,16 @@
           <h1>Submit your idea</h1>
             <div class="form_component">
               <label for="IdeaTitle">Idea title (optional)</label>
-              <input type="text" class="form-control" placeholder="Does it have a name?">
+              <input id="title" type="text" class="form-control" placeholder="Does it have a name?">
             </div>
             <div class="form_component">
               <label for="Summary">Summary</label>
-              <input type="text" class="form-control" placeholder="What does your idea do? Who is it for? Keep it short and simple!">
+              <input id="summary" type="text" class="form-control" placeholder="What does your idea do? Who is it for? Keep it short and simple!">
             </div>
             <div class="form_component">
               <label for="Description">Description (optional)</label>
               <textarea 
+                id="description" 
                 class="form-control" 
                 placeholder="Leave your ramblings here so people understand your ideas better." 
                 rows="3"></textarea>
@@ -62,6 +76,7 @@
             <div class="form_component">
               <label for="CurrentWork">Current work (if any)</label>
               <textarea 
+                id="links"
                 class="form-control" 
                 placeholder="Links for GitHub Repos, Figma, Google docs, Trello boards, etc." 
                 rows="3"></textarea>
@@ -73,97 +88,73 @@
                 <div class="col-4">
                     <p>Looking for</p>
                     <div class="form-check">
-                        <input type="checkbox" class="form-check-input" value="">
+                        <input type="checkbox" class="form-check-input" value="designer">
                         <label class="form-check-label" for="Designer">designer</label>
                     </div>
                     <div class="form-check">
-                        <input type="checkbox" class="form-check-input" value="">
+                        <input type="checkbox" class="form-check-input" value="developer">
                         <label class="form-check-label" for="Developer">developer</label>
                     </div>
                     <div class="form-check">
-                        <input type="checkbox" class="form-check-input" value="">
+                        <input type="checkbox" class="form-check-input" value="product manager">
                         <label class="form-check-label" for="ProductManager">product manager</label>
                     </div>
                 </div>
                 <div class="col-4">
                     <p>Type of technology:</p>
                     <div class="form-check">
-                        <input type="checkbox" class="form-check-input" value="">
+                        <input type="checkbox" class="form-check-input" value="Website">
                         <label class="form-check-label" for="website">Website</label>
                     </div>
                     <div class="form-check">
-                        <input type="checkbox" class="form-check-input" value="">
+                        <input type="checkbox" class="form-check-input" value="Web app">
                         <label class="form-check-label" for="webApp">Web app</label>
                     </div>
                     <div class="form-check">
-                        <input type="checkbox" class="form-check-input" value="">
+                        <input type="checkbox" class="form-check-input" value="iOS app">
                         <label class="form-check-label" for="iOSApp">iOS app</label>
                     </div>
                     <div class="form-check">
-                        <input type="checkbox" class="form-check-input" value="">
+                        <input type="checkbox" class="form-check-input" value="Android app">
                         <label class="form-check-label" for="androidApp">Android app</label>
                     </div>
                     <div class="form-check">
-                        <input type="checkbox" class="form-check-input" value="">
+                        <input type="checkbox" class="form-check-input" value="Figma Prototype">
                         <label class="form-check-label" for="figma">Figma Prototype</label>
                     </div>
                     <div class="form-check">
-                        <input type="checkbox" class="form-check-input" value="">
+                        <input type="checkbox" class="form-check-input" value="Other">
                         <label class="form-check-label" for="other">Other</label>
                     </div>
                 </div>
                 <div class="col-4">
                     <label for="Language">Language</label>
                     <div class="form-check">
-                        <input type="checkbox" class="form-check-input" value="">
+                        <input type="checkbox" class="form-check-input" value="Javascript">
                         <label class="form-check-label" for="Javascript">Javascript</label>
                     </div>
                     <div class="form-check">
-                        <input type="checkbox" class="form-check-input" value="">
+                        <input type="checkbox" class="form-check-input" value="HTML/CSS">
                         <label class="form-check-label" for="HTML-CSS">HTML/CSS</label>
                     </div>
                     <div class="form-check">
-                        <input type="checkbox" class="form-check-input" value="">
+                        <input type="checkbox" class="form-check-input" value="Python">
                         <label class="form-check-label" for="Python">Python</label>
                     </div>
                     <div class="form-check">
-                        <input type="checkbox" class="form-check-input" value="">
+                        <input type="checkbox" class="form-check-input" value="Java">
                         <label class="form-check-label" for="Java">Java</label>
                     </div>
                 </div>
             </div>
-            <button type="submit">Submit</button>
+            <button id="submit-dream" type="button" onClick="addDream()">Submit</button>
             <a href="index.html" style="margin-left: 15px;">Delete</a>
             <p><h5><a href="index.html">Home</a>  |  <a href="sign_in.html">Sign In</a></h5></p>
           </div>
         </form>
       </div>
     </div>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-
-    </script>
     <!-- Optional JavaScript -->
     <!-- Bootstrap CSS -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -15,8 +15,29 @@
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
     <script src="./scripts/auth.js"></script>
 
-  </head>
-  <body>
+  
+    <script type="text/javascript">
+      function initApp() {
+  
+      // Listening for auth state changes.
+      firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+          // User is signed in.
+          var email = user.email;
+          console.log("logged in: " + email);
+        } else {
+          // User is signed out.
+          console.log("logged out");
+        }
+      });
+        document.getElementById('sign-in').addEventListener('click', toggleSignIn, false);
+      }
+  
+      window.onload = function() {
+      initApp();
+      };
+    </script>
+
     <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"

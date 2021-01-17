@@ -1,15 +1,41 @@
+
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cloud Castle Profile</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- update the version number as needed -->
     <script defer src="/__/firebase/8.2.3/firebase-app.js"></script>
     <!-- include only the Firebase features as you need -->
     <script defer src="/__/firebase/8.2.3/firebase-auth.js"></script>
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
     <script src="./scripts/auth.js"></script>
+
+  
+    <script type="text/javascript">
+      function initApp() {
+  
+      // Listening for auth state changes.
+      firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+            // User is signed in.
+            var email = user.email;
+            console.log("logged in: " + email);
+            jQuery("#display-name").html = email;
+        } else {
+            // User is signed out.
+            console.log("logged out");
+        }
+      });
+
+      }
+  
+      window.onload = function() {
+        initApp();
+      };
+    </script>
 
     <!-- add favicon in the tab -->
     <link rel="icon" href="img/favicon.ico">
@@ -57,6 +83,7 @@
     <div class="main">
         <div class="name">
             <button class="pfp"> </button>
+            <h2 id="display-name">Display Name</h2>
         
         </div>
         <br>
