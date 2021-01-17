@@ -1,3 +1,4 @@
+//var domain = "https://localhost:5000";
 var domain = "https://cloudcastle.space";
 //var domain = "https://localhost:5000";
 
