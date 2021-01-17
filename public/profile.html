@@ -1,15 +1,15 @@
 <html>
-    <head>
-        <!-- update the version number as needed -->
-        <script defer src="/__/firebase/8.2.3/firebase-app.js"></script>
-        <!-- include only the Firebase features as you need -->
-        <script defer src="/__/firebase/8.2.3/firebase-auth.js"></script>
-        <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-        <script src="./scripts/auth.js"></script>
-    
-    
-        <link rel="stylesheet" href="styles.css">
-    </head>
+
+<head>
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/8.2.3/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/8.2.3/firebase-auth.js"></script>
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+    <script src="./scripts/auth.js"></script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
 
 <body>
     <div class="sidenav">
@@ -40,17 +40,32 @@
                         <a href="coming_soon.html">Help and Support</a>
                         <a onclick="firebase.auth().signOut()" href="index.html">Log Out</a>
                 </li>
-                <li><a href="messaging.html"><img src="img/message.png" height=30px /></a></li>
+                <li>
+                    <a href="messaging.html"><img src="img/message.png" height=30px /></a>
+                </li>
             </ul>
         </div>
     </div>
-    
+
     <div class="sidenavR">
     </div>
 
     <div class="main">
+        <div class = "name">
+            <button class="pfp"> </button>
+        <h1>Display name</h1>
+        </div>
+        
+       <br>
+
+        <div class="expertise">
+            <h2>Expertise</h2>
+            <div class="skill"></div> <div class="idea"></div> 
+        </div>
+        <h3>Ideas contributed</h3>
         <div class="idea"></div> <br>
         <div class="idea"></div> <br>
     </div>
 </body>
+
 </html>
