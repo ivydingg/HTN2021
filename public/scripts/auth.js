@@ -1,3 +1,6 @@
+var domain = "https://hack-the-north-2020.web.app";
+//var domain = "https://localhost:5000";
+
 function handleSignUp() {
   var email = document.getElementById('email').value;
   var password = document.getElementById('password').value;
@@ -23,7 +26,7 @@ function handleSignUp() {
     user.uid = username;
     user.displayName = first_name + " " + last_name;
     console.log (user.displayName);
-    //window.location.href = "https://localhost:5000/project_page.html";
+    window.location.href =  domain + "/project_page.html";
 
   }).catch(function(error) {
     // Handle Errors here.
@@ -65,9 +68,9 @@ function toggleSignIn() {
       return;
     }
     // Sign in with email and pass.
-    firebase.auth().signInWithEmailAndPassword(email, password).then(function(user) {
-    
-      window.location.href = "https://localhost:5000/project_page.html";
+    firebase.auth().signInWithEmailAndPassword(email, password).then(function() {
+      
+      window.location.href = domain + "/project_page.html";
   
     }).catch(function(error) {
       // Handle Errors here.
