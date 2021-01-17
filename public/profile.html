@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -22,10 +23,7 @@
             // User is signed in.
             var email = user.email;
             console.log("logged in: " + email);
-            console.log(user.displayName);
-            console.log("display");
-            var displayName = user.displayName;
-            jQuery("#display-name").html = displayName;
+            jQuery("#display-name").html = email;
         } else {
             // User is signed out.
             console.log("logged out");
@@ -85,16 +83,7 @@
     <div class="main">
         <div class="name">
             <button class="pfp"> </button>
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <h1 id="display-name">Display name</h1>
-        </div>
-=======
->>>>>>> main
-=======
-        <h1 id="display-name">Display name</h1>
-        </div>
->>>>>>> 55edac2690d7b1ce3a06714674daae3202065d41
+            <h2 id="display-name">Display Name</h2>
         
         </div>
         <br>
