@@ -12,7 +12,6 @@
     </head>
 
 <body>
-
     <div class="sidenav">
         <div class="logo">
             <a href="index.html">
@@ -20,38 +19,38 @@
             </a>
         </div>
         <a href="gallery_view.html">IDEA GALLERY</a>
-        <a href="submit_idea.html">ADD AN IDEA</a>
-        <a href="create_user.html">LIKED IDEAS</a>
+        <a href="submit_idea.html">ADD A DREAM</a>
+        <a href="create_user.html">LIKED DREAMS</a>
     </div>
 
-    <div class="sidenavR">
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Clients</a>
-        <a href="#">Contact</a>
-    </div>
-
-    <div class="main">
+    <div class="top">
         <div class="topnav">
             <div class="search-container">
                 <form action="/action_page.php">
-                    <input type="text" placeholder="beep boop" name="search">
+                    <input type="text" placeholder="thinking of..." name="search">
                     <button type="submit"><img src="img/Search.png" height=35px /></button>
                 </form>
             </div>
-
             <ul>
                 <li class="dropdown">
                     <a href="javascript:void(0)" class="dropbtn"><img src="img/Profile.png" height=30px /></a>
                     <div class="dropdown-content">
-                        <a href="#">Profile</a>
-                        <a href="#">Notification Settings</a>
-                        <a href="#">Help and Support</a>
-                        <a href="#">Log Out</a>
+                        <a href="profile.html">Profile</a>
+                        <a href="coming_soon.html">Notification Settings</a>
+                        <a href="coming_soon.html">Help and Support</a>
+                        <a onclick="firebase.auth().signOut()" href="index.html">Log Out</a>
                 </li>
-                <li><a href="#"><img src="img/message.png" height=30px /></a></li>
+                <li><a href="messaging.html"><img src="img/message.png" height=30px /></a></li>
             </ul>
         </div>
+    </div>
+    
+    <div class="sidenavR">
+    </div>
+
+    <div class="main">
+        <div class="idea"></div> <br>
+        <div class="idea"></div> <br>
     </div>
 </body>
 </html>
