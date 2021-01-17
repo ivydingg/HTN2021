@@ -12,8 +12,6 @@
     <script defer src="/__/firebase/8.2.3/firebase-app.js"></script>
     <!-- include only the Firebase features as you need -->
     <script defer src="/__/firebase/8.2.3/firebase-auth.js"></script>
-    <script defer src="/__/firebase/8.2.3/firebase-firestore.js"></script>
-    <script defer src="/__/firebase/8.2.3/firebase-messaging.js"></script>
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
     <script src="./scripts/auth.js"></script>
 
@@ -44,37 +42,13 @@
             <label for="Password">Password</label>
             <input type="password" id = "password" class="form-control">
           </div>
+          <h6 type="password-reset"><a href="reset_password.html">forgot password</a></h6>
           <button id = "sign-in" type="button">Submit</button>
           <p><h5>Don't have an account? Sign up <a href="create_user.html">here</a></h5></p>
-          <button type="password-reset">Reset Password</button>
         </div>
       </form>
     </div>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
+    
     <!-- Optional JavaScript -->
     <!-- Bootstrap CSS -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
