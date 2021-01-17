@@ -1,46 +1,49 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-        <!-- update the version number as needed -->
-        <script defer src="/__/firebase/8.2.3/firebase-app.js"></script>
-        <!-- include only the Firebase features as you need -->
-        <script defer src="/__/firebase/8.2.3/firebase-auth.js"></script>
-        <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-        <script src="./scripts/auth.js"></script>
-        <script src="./scripts/firestore.js"></script>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cloud Castle Profile</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/8.2.3/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/8.2.3/firebase-auth.js"></script>
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+    <script src="./scripts/auth.js"></script>
 
   
-        <script type="text/javascript">
-          function initApp() {
-      
-          // Listening for auth state changes.
-          firebase.auth().onAuthStateChanged(function(user) {
-            if (user) {
-                // User is signed in.
-                var email = user.email;
-                console.log("logged in: " + email);
-                console.log(user.displayName);
-                console.log("display");
-                var displayName = user.displayName;
-                jQuery("#display-name").html = displayName;
-            } else {
-                // User is signed out.
-                console.log("logged out");
-            }
-          });
+    <script type="text/javascript">
+      function initApp() {
+  
+      // Listening for auth state changes.
+      firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+            // User is signed in.
+            var email = user.email;
+            console.log("logged in: " + email);
+            console.log(user.displayName);
+            console.log("display");
+            var displayName = user.displayName;
+            jQuery("#display-name").html = displayName;
+        } else {
+            // User is signed out.
+            console.log("logged out");
+        }
+      });
 
-          }
-      
-          window.onload = function() {
-            initApp();
-          };
-        </script>
-    
-        <!-- add favicon in the tab -->
-        <link rel="icon" href="img/favicon.ico">
+      }
+  
+      window.onload = function() {
+        initApp();
+      };
+    </script>
 
-        <link rel="stylesheet" href="styles.css">
-    </head>
+    <!-- add favicon in the tab -->
+    <link rel="icon" href="img/favicon.ico">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
 
 <body>
     <div class="sidenav">
@@ -78,20 +81,25 @@
         </div>
     </div>
 
-    <div class="sidenavR">
-    </div>
 
     <div class="main">
-        <div class = "name">
+        <div class="name">
             <button class="pfp"> </button>
+<<<<<<< HEAD
         <h1 id="display-name">Display name</h1>
         </div>
+=======
+>>>>>>> main
         
-       <br>
-
+        </div>
+        <br>
         <div class="expertise">
             <h2>Expertise</h2>
-            <div class="skill"></div> <div class="idea"></div> 
+            <button class="skill">developer</button>
+            <button class="skill">designer</button>
+            <button class="skill">javascript</button>
+            <button class="skill">css/html</button>
+            <button class="skill">website</button>
         </div>
         <h3>Ideas contributed</h3>
         <div class="idea"></div> <br>
