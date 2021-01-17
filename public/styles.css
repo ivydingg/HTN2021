@@ -2,6 +2,9 @@ body {
     background-color: aliceblue;
     margin: 0px;
 }
+html {
+    scroll-behavior: smooth;
+}
 
 .header {
     background: #555B6E;
@@ -26,7 +29,7 @@ body {
 }
 
 .topnav a:hover {
-    background-color: #ddd;
+    background-color: #89B0AE;
     color: black;
 }
 
@@ -35,13 +38,41 @@ body {
     color: white
 }
 
+.topnav .search-container {
+    float: left;
+}
+
 .topnav input[type=text] {
     float: left;
     padding: 6px;
     border: none;
+    border-radius: 60px;
     margin-top: 8px;
-    margin-left: 16px;
+    margin-left: 25px;
     font-size: 17px;
+}
+
+.topnav .search-container button {
+    float: left;
+    padding: 6px 10px;
+    margin-top: 0px;
+    margin-right: 16px;
+    background: #89B0AE;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+    background: #89B0AE;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 3px;
+    overflow: hidden;
+    background-color: #89B0AE;
 }
 
 li {
@@ -52,12 +83,12 @@ li a, .dropbtn {
     display: inline-block;
     color: white;
     text-align: right;
-    padding: 4.3px 5px;
+    padding: 8.3px 5px;
     text-decoration: none;
 }
 
 li a:hover, .dropdown:hover .dropbtn {
-    background-color:#89B0AE;
+    background-color: #89B0AE;
 }
 
 li.dropdown {
@@ -67,12 +98,11 @@ li.dropdown {
 .dropdown-content {
     display: none;
     position: absolute;
-    right:0;
+    right: 0;
     background-color: #BEE3DB;
     min-width: 100px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
-    
 }
 
 .dropdown-content a {
@@ -85,7 +115,7 @@ li.dropdown {
 }
 
 .dropdown-content a:hover {
-    background-color: #f1f1f1;
+    background-color: #89B0AE;
 }
 
 .dropdown:hover .dropdown-content {
@@ -119,11 +149,59 @@ li.dropdown {
     display: block;
 }
 
-.main {
-    margin-left: 225px;
+.sidenavR {
+    width: 250px;
+    position: fixed;
+    border-radius: 10px;
+    top: 80px;
+    right: 20px;
+    background: #c4c4c4;
+    overflow: scroll;
+    padding: 8px 0;
 }
 
+.sidenavR a {
+    padding: 3px 8px 3px 20px;
+    text-decoration: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 15px;
+    color: black;
+    display: block;
+}
 
+.sidenavR h1 {
+    padding: 6px 5px 6px 20px;
+    text-decoration: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+    display: block;
+    margin:0;
+}
+.sidenavR h2 {
+    padding: 2px 2px 2px 20px;
+    text-decoration: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    display: block;
+    margin:0;
+}
+
+.idea {
+    width: 500 px;
+    height: 50px;
+    border-radius: 10px;
+    padding: 10px 10px;
+    background-color: #555B6E;
+}
+
+.main {
+    margin-left: 225px;
+    overflow: scroll;
+}
 
 @media screen and (max-height: 450px) {
     .sidenav {
