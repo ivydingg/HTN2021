@@ -220,7 +220,7 @@ li.dropdown {
     }
 }
 
-h1, h2, h3, h4, h5, h6, .title, .btn {
+h1, h2, h3, h4, h5, h6, .title, .btn, p {
     font-family: -apple-system, 'Helvetica', sans-serif;
     color: #555B6E;
 }
@@ -314,4 +314,12 @@ button {
     border-radius: 10px;
     margin: 25px 15px 25px;
     font-size: 36px;
+}
+
+#message {
+    text-align: center;
+    padding: 5%;
+    background: white;
+    border-radius: 15px;
+    margin: 15% 15%;
 }
