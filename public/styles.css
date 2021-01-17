@@ -22,7 +22,6 @@ html {
     overflow: hidden;
     vertical-align: text-bottom;
     height: 50px;
-    position: sticky;
 }
 
 .topnav a {
@@ -96,6 +95,12 @@ li a:hover, .dropdown:hover .dropbtn {
 
 li.dropdown {
     display: inline-block;
+}
+
+#profilepic {
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 .dropdown-content {
@@ -200,22 +205,26 @@ li.dropdown {
     border-radius: 10px;
     padding: 10px 10px;
     background-color: #c4c4c4;
+    margin-top: 10px;
 }
-.messaging {
-    width: 95%;
-    height: 70%;
-    border-radius: 10px;
-    padding: 10px 10px;
-    background-color: #c4c4c4;
-}
+
 .top {
     margin-left: 225px;
+    position: fixed;
+    top: 0;
+    width: 84%;
+    background-color: #89B0AE;
 }
 
 .main {
     margin-left: 240px;
     margin-right: 290px;
     margin-top: 30px
+}
+
+#filler {
+    height: 245px;
+    width: 100%;
 }
 
 @media screen and (max-height: 450px) {
@@ -318,9 +327,9 @@ button {
     border-color: #555B6E;
     color: #555B6E;
     border-width: 2px;
-    border-radius: 10px;
     margin: 25px 15px 25px;
     font-size: 36px;
+    border-radius: 10px;
 }
 
 #message {
