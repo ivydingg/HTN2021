@@ -302,6 +302,7 @@ a {
 #landing_top_menu {
     padding: 20px;
     text-align: right;
+    background: none;
 }
 
 .ideas {
