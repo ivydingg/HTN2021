@@ -1,21 +1,19 @@
 <html>
+    <head>
+        <!-- update the version number as needed -->
+        <script defer src="/__/firebase/8.2.3/firebase-app.js"></script>
+        <!-- include only the Firebase features as you need -->
+        <script defer src="/__/firebase/8.2.3/firebase-auth.js"></script>
+        <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+        <script src="./scripts/auth.js"></script>
+    
+        <!-- add favicon in the tab -->
+        <link rel="icon" href="img/favicon.ico">
 
-<head>
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/8.2.3/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/8.2.3/firebase-auth.js"></script>
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-    <script src="./scripts/auth.js"></script>
-
-    <!-- add favicon in the tab -->
-    <link rel="icon" href="img/favicon.ico">
-
-    <link rel="stylesheet" href="styles.css">
-</head>
+        <link rel="stylesheet" href="styles.css">
+    </head>
 
 <body>
-
     <div class="sidenav">
         <div class="logo">
             <a href="index.html">
@@ -46,6 +44,19 @@
                 </li>
                 <li><a href="messaging.html"><img src="img/message.png" height=30px /></a></li>
             </ul>
+        </div>
+    </div>
+
+    <div class="sidenavR">
+        <h1 class="h1">Messages</h1>
+        <a href="#">person 1</a>
+        <a href="#">person 2</a>
+        <a href="#">person 3</a>
+    </div>
+
+    <div class="main">
+        <div class="messaging">
+
         </div>
     </div>
 </body>
