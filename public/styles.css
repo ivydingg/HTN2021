@@ -245,7 +245,7 @@ a {
 
 #landing_div {
     text-align: center;
-    padding: 240px 0;
+    padding: 240px 0px 0px;
 }
 
 #landing_top_menu {
@@ -264,7 +264,7 @@ a {
     background-color: #89B0AE;
     background-repeat: no-repeat;
     border-color: none;
-    padding: 50px;
+    padding: 50px 50px;
 }
 
 .form, .form_ideas {
@@ -274,7 +274,7 @@ a {
 }
 
 .form {
-    margin: 5% 25%;
+    margin: auto 25% auto;
 }
 
 .form_ideas {
