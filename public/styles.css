@@ -151,19 +151,28 @@ a {
     font-style: normal;
     font-weight: bold;
     font-size: 56px;
-    line-height: 200px;
+    line-height: 100px;
 }
 
-#landing_div {
+#landing_page {
     background-image: url("img/landing_bg.png");
     background-size: 100%;
     background-color: #89B0AE;
     background-repeat: no-repeat;
     border-color: none;
-    height: 780px;
+    height: 900px;
     width: 100%;
+    
+}
+
+#landing_div {
     text-align: center;
-    padding: 270px 0;
+    padding: 240px 0;
+}
+
+#landing_top_menu {
+    padding: 20px;
+    text-align: right;
 }
 
 .ideas {
@@ -215,7 +224,7 @@ button {
     border-color: #555B6E;
     color: #555B6E;
     border-width: 2px;
-    margin: 5px 0px 15px;
+    margin: 25px 15px 25px;
     font-size: 36px;
 }
 
