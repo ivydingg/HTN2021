@@ -1,28 +1,18 @@
 <html>
+
 <head>
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/8.2.3/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/8.2.3/firebase-auth.js"></script>
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+    <script src="./scripts/auth.js"></script>
+
+
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-
-    <div class="sidenav">
-        <div class="logo">
-            <a href="index.html">
-                <img src="img/logo_small.png" height=30px />
-            </a>
-        </div>
-        <a href="index.html">IDEA GALLERY</a>
-        <a href="submit_idea.html">ADD AN IDEA</a>
-        <a href="create_user.html">LIKED IDEAS</a>
-    </div>
-
-    <div class="sidenavR">
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Clients</a>
-        <a href="#">Contact</a>
-    </div>
-
     <div class="main">
         <div class="topnav">
             <div class="search-container">
@@ -31,7 +21,6 @@
                     <button type="submit"><img src="img/Search.png" height=35px /></button>
                 </form>
             </div>
-
             <ul>
                 <li class="dropdown">
                     <a href="javascript:void(0)" class="dropbtn"><img src="img/Profile.png" height=30px /></a>
@@ -44,6 +33,50 @@
                 <li><a href="#"><img src="img/message.png" height=30px /></a></li>
             </ul>
         </div>
+
+        <div class="sidenav">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logo_small.png" height=30px />
+                </a>
+            </div>
+            <a href="gallery_view.html">IDEA GALLERY</a>
+            <a href="submit_idea.html">ADD AN IDEA</a>
+            <a href="create_user.html">LIKED IDEAS</a>
+        </div>
+
+        <div class="sidenavR">
+            <h1 class="h1">Filters</h1>
+            <h2>Progress</h2>
+            <a href="#">least to most</a>
+            <a href="#">most to least</a>
+            <a href="#">completed</a>
+            <h2>Votes</h2>
+            <a href="#">least to most</a>
+            <a href="#">most to least</a>
+            <h2>Most Popular</h2>
+            <a href="#">least to most</a>
+            <a href="#">most to least</a>
+            <a href="#">completed</a>
+            <a href="#">Contact</a>
+            <h2>Looking for</h2>
+            <a href="#">least to most</a>
+            <a href="#">most to least</a>
+            <a href="#">completed</a>
+            <h2>Types of technology</h2>
+            <a href="#">least to most</a>
+            <a href="#">most to least</a>
+            <a href="#">completed</a>
+            <a href="#">Contact</a>
+            <h2>Language</h2>
+            <a href="#">least to most</a>
+            <a href="#">most to least</a>
+            <a href="#">completed</a>
+            <a href="#">Contact</a>
+        </div>
+
+    </div class="idea">
     </div>
 </body>
+
 </html>
