@@ -39,8 +39,19 @@
         <!-- add favicon in the tab -->
         <link rel="icon" href="img/favicon.ico">
 
-        <link rel="stylesheet" href="styles.css">
-    </head>
+<head>
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/8.2.3/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/8.2.3/firebase-auth.js"></script>
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+    <script src="./scripts/auth.js"></script>
+
+    <!-- add favicon in the tab -->
+    <link rel="icon" href="img/favicon.ico">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
 
 <body>
     <div class="sidenav">
@@ -78,20 +89,22 @@
         </div>
     </div>
 
-    <div class="sidenavR">
-    </div>
 
     <div class="main">
-        <div class = "name">
+        <div class="name">
             <button class="pfp"> </button>
         <h1 id="display-name">Display name</h1>
         </div>
         
-       <br>
-
+        </div>
+        <br>
         <div class="expertise">
             <h2>Expertise</h2>
-            <div class="skill"></div> <div class="idea"></div> 
+            <button class="skill">developer</button>
+            <button class="skill">designer</button>
+            <button class="skill">javascript</button>
+            <button class="skill">css/html</button>
+            <button class="skill">website</button>
         </div>
         <h3>Ideas contributed</h3>
         <div class="idea"></div> <br>
